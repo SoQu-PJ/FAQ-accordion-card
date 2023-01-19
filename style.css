@@ -1,0 +1,20 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    --bg-gradient: hsl(273, 75%, 66%),hsl(240, 73%, 65%);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(var(--bg-gradient));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
