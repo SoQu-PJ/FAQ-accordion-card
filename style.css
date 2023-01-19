@@ -1,20 +1,119 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* VARIABLES */
+:root {
+    /* MAIN SECTION */
+    --bg-gradient: hsl(273, 75%, 66%), hsl(240, 73%, 65%);
+    --faq-section: hsl(0, 100%, 100%);
 
-:root{
-    --bg-gradient: hsl(273, 75%, 66%),hsl(240, 73%, 65%);
+    /* TEXT */
+    --summary-color: hsl(237, 12%, 33%);
+    --answer-color: hsl(240, 6%, 50%);
 }
 
-
-body{
+/* MAIN SECTION  */
+body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(var(--bg-gradient));
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
 }
 
-footer{
+.faq-section {
+    background-color: var(--faq-section);
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    border-radius: 15px;
+    margin-top: 15vh;
+}
+
+/* PICTURES */
+
+.faq-section .pictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+.faq-section .picture-women {
+    position: absolute;
+    display: block;
+    width: 80%;
+}
+
+.faq-section .picture-pattern {
+    position: absolute;
+    display: block;
+    width: 90%;
+    top: 2vh;
+    left: 10%;
+}
+
+.picture-pattern img {
+    width: 90%;
+}
+
+/* TEXT */
+
+.faq-section h1 {
+    width: 100%;
+    text-align: center;
+    margin: 8rem 0 1rem 0;
+}
+
+.faq-section details {
+    width: 90%;
+    margin: 1rem;
+}
+
+.faq-section summary {
+    color: var(--summary-color);
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-section summary::after {
+    content: url(images/icon-arrow-down.svg);
+}
+
+.faq-section details[open] summary {
+    font-weight: 700;
+}
+
+.faq-section details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.faq-section .answer {
+    font-size: 0.75rem;
+    color: var(--answer-color);
+}
+
+/* FOOTER */
+
+footer {
     position: absolute;
     bottom: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
